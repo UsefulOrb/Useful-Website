@@ -1,0 +1,13 @@
+{
+  "name": "my-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "serve public -l 3000 -s",
+    "build": "echo 'static site - no build step'",
+    "start": "serve public -l 3000 -s"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#181935" />
+  <meta name="description" content="UsefulOrb is a specialized Minecraft studio for custom server configurations and plugin development. High-performance, lag-free, scalable multiplayer worlds." />
+  <title>UsefulOrb — Minecraft Server & Plugin Studio</title>
+  <link rel="icon" type="image/png" href="assets/usefulorb-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ================= HEADER / NAV ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="UsefulOrb home">
+        <img src="assets/usefulorb-logo.png" alt="UsefulOrb logo" class="brand-logo" />
+        <span class="brand-name">Useful<span class="brand-accent">Orb</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#work" class="nav-link">Our Work</a></li>
+          <li><a href="#plans" class="nav-link">Plans</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HOME ================= -->
+    <section id="home" class="section hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Minecraft Server &amp; Plugin Studio</p>
+        <h1 class="hero-title">
+          <span>Your Vision.</span>
+          <span>Your World.</span>
+          <span class="grad">We Build It.</span>
+        </h1>
+
+        <div class="hero-badges">
+          <div class="feature-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Minecraft Server Configurations
+          </div>
+          <div class="feature-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Minecraft Plugin Development
+          </div>
+        </div>
+
+        <!-- About / Why two column -->
+        <div class="two-col">
+          <article class="glass-card">
+            <h2 class="card-title">About Us</h2>
+            <p>
+              At UsefulOrb, we turn Minecraft ideas into fully optimized, high-performance realities.
+              We are a specialized studio dedicated to custom server development and plugin creation,
+              built to help server owners launch, scale, and dominate the multiplayer space.
+            </p>
+            <p>
+              Whether you are starting your very first community or looking to upgrade an existing network
+              with unique mechanics, we provide complete end-to-end solutions. From custom Java plugins
+              tailored to your specific gameplay ideas to full server setups optimized for seamless
+              performance, we handle the complex technical architecture so you can focus on building your community.
+            </p>
+          </article>
+
+          <article class="glass-card">
+            <h2 class="card-title">Why Choose UsefulOrb?</h2>
+            <ul class="why-list">
+              <li>
+                <strong>Custom Plugin Development:</strong>
+                Unique gameplay features and systems written specifically for your server&apos;s needs.
+              </li>
+              <li>
+                <strong>Performance-First Setup:</strong>
+                Clean configurations, lag-free environments, and smooth player experiences.
+              </li>
+              <li>
+                <strong>Scalable Architecture:</strong>
+                Built to handle player growth and heavy server loads without compromising stability.
+              </li>
+            </ul>
+            <p class="why-punch">
+              Don&apos;t just play the game — own the world. Partner with UsefulOrb and launch a server that stands out.
+            </p>
+          </article>
+        </div>
+
+        <div class="hero-cta-wrap">
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OUR WORK ================= -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Portfolio</p>
+          <h2 class="section-title">Our Work</h2>
+          <p class="section-sub">Real networks we&apos;ve built, launched, and maintained.</p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/FlOezIEQB9A"
+                title="JoudSMP showcase video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+            <div class="work-body">
+              <div class="work-head">
+                <h3 class="work-title">JoudSMP</h3>
+                <span class="tag">~30 players daily</span>
+              </div>
+              <p>
+                Creating a Velocity proxy network with Hub and SMP, managing the server,
+                ensuring no bugs, and countering cheaters. Averaging about 30 players daily.
+              </p>
+              <a class="text-link" href="https://youtu.be/FlOezIEQB9A?si=zIfvnxCBYvuEd3ni" target="_blank" rel="noopener noreferrer">Watch on YouTube &rarr;</a>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="video-frame">
+              <iframe
+                src="https://www.youtube.com/embed/WBR5gMAbhps"
+                title="BrineSMP showcase video"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+            </div>
+            <div class="work-body">
+              <div class="work-head">
+                <h3 class="work-title">BrineSMP</h3>
+                <span class="tag">~40 players daily</span>
+              </div>
+              <p>
+                Creating an SMP server with no proxy on version 26.2 while this version wasn&apos;t
+                fully supported yet. Managed without problems, fixed bugs and glitches, and blocked AFK fake bots.
+                Averaging about 40 players daily.
+              </p>
+              <a class="text-link" href="https://www.youtube.com/shorts/WBR5gMAbhps" target="_blank" rel="noopener noreferrer">Watch on YouTube &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PLANS ================= -->
+    <section id="plans" class="section plans-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Pricing</p>
+          <h2 class="section-title">Minecraft Server Setup Plans</h2>
+          <p class="section-sub">Three tiers, each building on the last — from a clean launch to a full network.</p>
+        </div>
+
+        <div class="plans-grid">
+          <!-- BASIC -->
+          <article class="plan-card">
+            <div class="plan-top">
+              <h3 class="plan-name">Basic Plan</h3>
+              <span class="plan-delivery">Delivery: 6–7 Days</span>
+            </div>
+            <ul class="plan-features">
+              <li>
+                <span class="feat-label">Visuals &amp; UI</span>
+                Gradient text support, animated MOTD, custom Scoreboard, TAB list.
+                <span class="ph-group">
+                  <span class="ph ph-motd">MOTD 10:1 image</span>
+                  <span class="ph">Scoreboard image</span>
+                  <span class="ph">TAB menu image</span>
+                </span>
+              </li>
+              <li>
+                <span class="feat-label">Core Economy &amp; Trade</span>
+                Single currency system (/shop, /sell, /worth, /ah).
+                <span class="ph-group"><span class="ph">Economy GIF</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Teleportation &amp; Spawn</span>
+                World spawn setup, /home, /tpa, /tpahere, AFK area.
+                <span class="ph-group"><span class="ph">AFK / TPA GIF</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Player Systems</span>
+                Team system and 2 Leaderboards.
+                <span class="ph-group"><span class="ph">Team 1:5 text</span><span class="ph">Leaderboard image</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Cross-Platform &amp; Security</span>
+                Bedrock Edition compatibility (Geyser/Floodgate), basic Anti-Cheat, basic Anti-Xray, simple login/register.
+                <span class="ph-group"><span class="ph">Bedrock Join GIF</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Moderation Tools</span>
+                Core commands (/invsee, /ban, /tempban, /mute, /tempmute).
+                <span class="ph-group"><span class="ph">Ban 1:7 image</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Teleportation</span>
+                /rtp (Random Teleport).
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-outline plan-btn">Get Started</a>
+          </article>
+
+          <!-- MEDIUM -->
+          <article class="plan-card featured">
+            <span class="plan-flag">Most Popular</span>
+            <div class="plan-top">
+              <h3 class="plan-name">Medium Plan</h3>
+              <span class="plan-delivery">Delivery: 7–10 Days</span>
+            </div>
+            <p class="plan-includes">Includes all features from Basic Plan.</p>
+            <ul class="plan-features">
+              <li>
+                <span class="feat-label">Economy &amp; Commerce</span>
+                Dual-currency system, /order system, Crate store setup, paid Rank configurations.
+              </li>
+              <li>
+                <span class="feat-label">Teleportation</span>
+                /rtpq with defined RTP zones.
+                <span class="ph-group"><span class="ph">RTP Zone GIF</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Cross-Platform &amp; Security</span>
+                Auto-login integration for Premium Java and Bedrock players.
+                <span class="ph-group"><span class="ph">Premium Auto-login GIF</span></span>
+              </li>
+              <li>
+                <span class="feat-label">Security</span>
+                Real-time X-Ray alerts, single-language Anti-Swear filter.
+              </li>
+              <li>
+                <span class="feat-label">Data Protection &amp; Logging</span>
+                Block logging &amp; rollback system, automated inventory backups.
+              </li>
+              <li>
+                <span class="feat-label">Stats &amp; Competition</span>
+                Expanded to 6 Leaderboards.
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary plan-btn">Get Started</a>
+          </article>
+
+          <!-- HIGH -->
+          <article class="plan-card">
+            <div class="plan-top">
+              <h3 class="plan-name">High Plan</h3>
+              <span class="plan-delivery">Delivery: 15 Days</span>
+            </div>
+            <p class="plan-includes">Includes all features from Medium Plan.</p>
+            <ul class="plan-features">
+              <li>
+                <span class="feat-label">Network Infrastructure</span>
+                Proxy network setup (BungeeCord/Velocity) with dedicated Hub server.
+              </li>
+              <li>
+                <span class="feat-label">Advanced Security &amp; Protection</span>
+                Advanced Anti-Xray (hides visible ores &amp; spawners), Anti-Freecam, Anti-Minimap enforcement,
+                dual-language Anti-Swear filter, hidden command suggestions.
+              </li>
+              <li>
+                <span class="feat-label">Custom Assets</span>
+                Dedicated Java &amp; Bedrock Resource Pack integration.
+                <img src="assets/plan-resourcepack.png" alt="Custom Java and Bedrock resource pack in-game showcase" class="plan-shot" loading="lazy" />
+              </li>
+              <li>
+                <span class="feat-label">Monetization</span>
+                Full Tebex webstore integration.
+                <img src="assets/plan-tebex.png" alt="Tebex webstore with rank packages and crates" class="plan-shot" loading="lazy" />
+              </li>
+              <li>
+                <span class="feat-label">Custom Player Settings (/settings GUI)</span>
+                Toggle hostile mob spawning, /order notifications, AH announcements, Night Vision,
+                item /worth lore display, Fast Crystal placement, Public Chat, /msg.
+                <img src="assets/plan-settings.png" alt="In-game /settings GUI menu with toggle options" class="plan-shot" loading="lazy" />
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-outline plan-btn">Get Started</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Get In Touch</p>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-sub">Join our Discord community — the fastest way to reach the team and start your project.</p>
+        </div>
+
+        <div class="discord-wrap">
+          <div class="discord-card">
+            <div class="discord-banner" aria-hidden="true"></div>
+            <div class="discord-content">
+              <div class="discord-icon">
+                <img src="assets/usefulorb-logo.png" alt="UsefulOrb server icon" />
+              </div>
+              <div class="discord-meta">
+                <p class="discord-label">Discord Community Server</p>
+                <h3 class="discord-name">UsefulOrb</h3>
+                <div class="discord-counts">
+                  <span class="count-item"><span class="dot dot-online" aria-hidden="true"></span><span id="onlineCount">6</span> Online</span>
+                  <span class="count-item"><span class="dot dot-offline" aria-hidden="true"></span><span id="totalCount">16</span> Members</span>
+                </div>
+                <ul class="discord-tags" aria-label="Community tags">
+                  <li class="discord-tag"><img src="assets/minecraft-grass.png" alt="" class="tag-icon" />Minecraft</li>
+                </ul>
+              </div>
+              <a class="btn btn-discord" href="https://discord.gg/ApGsq8yGJT" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 127.14 96.36" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+                Join Discord
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="brand brand-sm">
+        <img src="assets/usefulorb-logo.png" alt="" class="brand-logo" />
+        <span class="brand-name">Useful<span class="brand-accent">Orb</span></span>
+      </a>
+      <p class="footer-copy">© <span id="year"></span> UsefulOrb Studio. Built for the multiplayer space.</p>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#home">Home</a>
+        <a href="#work">Our Work</a>
+        <a href="#plans">Plans</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
