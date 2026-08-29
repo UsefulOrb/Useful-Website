@@ -59,7 +59,7 @@
 
   /* ---------- Reveal on scroll ---------- */
   var revealTargets = document.querySelectorAll(
-    ".glass-card, .work-card, .plan-card, .discord-card, .hero-badges, .section-head"
+    ".glass-card, .work-card, .showcase-card, .plan-card, .discord-card, .hero-badges, .section-head"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 

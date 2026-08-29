@@ -1,13 +1,15 @@
 {
-  "name": "my-project",
+  "name": "useful-orb-website",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "serve public -l 3000 -s",
-    "build": "echo 'static site - no build step'",
-    "start": "serve public -l 3000 -s"
+    "dev": "node server.js",
+    "build": "echo 'static site - ready'",
+    "start": "node server.js"
   },
   "dependencies": {
+    "express": "^5.2.1",
     "serve": "^14.2.4"
   }
 }
