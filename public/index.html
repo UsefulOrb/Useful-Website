@@ -169,172 +169,280 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Studio Showcase</p>
-          <h2 class="section-title">In-Game Feature Showcase</h2>
-          <p class="section-sub">Explore custom UIs, TAB lists, scoreboards, settings menus, and monetization setups built by UsefulOrb.</p>
+          <h2 class="section-title">In-Game Features Showcase</h2>
+          <p class="section-sub">Explore the custom UIs, animations, economy mechanics, cross-platform systems, and performance configurations crafted by UsefulOrb.</p>
         </div>
 
         <div class="showcase-grid">
-          <!-- Item 1: TAB & Scoreboard -->
+          <!-- 1. AFK & RTP Zones (Dual Media) -->
           <article class="showcase-card">
             <div class="showcase-top">
-              <span class="showcase-tag">UI &amp; Visuals</span>
-              <h3 class="showcase-title">Custom TAB List &amp; Scoreboard</h3>
-              <p class="showcase-desc">Animated headers, player count trackers, rank prefixes, ping displays, and custom gradient text formatting.</p>
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Zones &amp; Teleport</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">AFK Reward Pools &amp; RTP Zones</h3>
+              <p class="showcase-desc">Rewarding player retention with automated AFK item/token pools, paired with safe random teleport queues (/rtpq) across configured biomes.</p>
             </div>
-            <div class="media-frame placeholder-frame">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                    <polyline points="21 15 16 10 5 21"></polyline>
-                  </svg>
-                </div>
-                <span class="frame-label">TAB &amp; Scoreboard Media Slot</span>
-                <span class="frame-hint">Upload Image or Animated GIF (1920×1080)</span>
+            
+            <div class="media-switch-header">
+              <span class="switch-label">Select View:</span>
+              <div class="media-toggle-group" role="tablist" aria-label="AFK and RTP views">
+                <button type="button" class="media-toggle-btn active" data-target="afk-rtp-media" data-type="video" data-src="assets/AFK_Zone.mp4" data-title="AFK Reward Zone (UsefulOrb)" data-badge="AFK Rewards">AFK Zone</button>
+                <button type="button" class="media-toggle-btn" data-target="afk-rtp-media" data-type="video" data-src="assets/RTP_Zone.mp4" data-title="Wilderness RTP Zone (UsefulOrb)" data-badge="Wilderness RTP">RTP Zone</button>
               </div>
             </div>
+
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/AFK_Zone.mp4" data-type="video" data-caption="AFK Rewards Zone &amp; Random Teleport Queue">
+              <video id="afk-rtp-media" class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/AFK_Zone.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge" id="afk-rtp-badge">AFK Rewards</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
           </article>
 
-          <!-- Item 2: Animated MOTD -->
+          <!-- 2. Bedrock & Premium Auto-Login -->
           <article class="showcase-card">
             <div class="showcase-top">
-              <span class="showcase-tag">Branding</span>
-              <h3 class="showcase-title">Animated MOTD &amp; Server List</h3>
-              <p class="showcase-desc">Multi-line color gradients, custom server icon branding, and dynamic MOTD text for server lists.</p>
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Authentication</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Bedrock &amp; Premium Auto-Login</h3>
+              <p class="showcase-desc">Instant automatic authentication for Bedrock players and verified Java premium accounts without repetitive /login or password prompts.</p>
             </div>
-            <div class="media-frame placeholder-frame ratio-banner">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                    <circle cx="12" cy="12" r="3"></circle>
-                  </svg>
-                </div>
-                <span class="frame-label">Server MOTD Banner Slot</span>
-                <span class="frame-hint">Upload 10:1 Aspect Ratio Image or GIF</span>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Bedrock_autologin.mp4" data-type="video" data-caption="Bedrock &amp; Java Premium Auto-Login Integration">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/Bedrock_autologin.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">Auto-Login</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 3. Improved Bedrock Chat (RTL Arabic/Hebrew) -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Bedrock Localization</span>
+                <span class="media-type-badge">HD UI</span>
+              </div>
+              <h3 class="showcase-title">Enhanced Bedrock Chat &amp; RTL Support</h3>
+              <p class="showcase-desc">Full Right-to-Left (RTL) Arabic and Hebrew language rendering, bi-directional character fixes, and clean unicode styling for Bedrock Edition.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Bedrock_Chat.png" data-type="image" data-caption="Enhanced Bedrock Chat with Right-To-Left (RTL) Arabic &amp; Hebrew Support">
+              <img src="assets/Bedrock_Chat.png" alt="Enhanced Bedrock chat with Arabic and RTL support" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">RTL Chat Fix</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 4. Command Safety & Filter -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Security</span>
+                <span class="media-type-badge">HD UI</span>
+              </div>
+              <h3 class="showcase-title">Command Safety &amp; Suggestion Filter</h3>
+              <p class="showcase-desc">Smart autocomplete limiter that hides backend plugins, system diagnostics, and unauthorized syntax, recommending only relevant player commands.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/commands_hide.png" data-type="image" data-caption="Command Safety &amp; Tab Suggestion Limiter">
+              <img src="assets/commands_hide.png" alt="Command safety and hidden suggestions showcase" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">Security Guard</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 5. Crates & Keys -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Reward Systems</span>
+                <span class="media-type-badge">HD UI</span>
+              </div>
+              <h3 class="showcase-title">Custom Reward Crates &amp; Keys</h3>
+              <p class="showcase-desc">Tiered physical and virtual crate keys, animated rolling preview menus, customizable loot tables, and server-wide broadcast alerts for rare drops.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Crates.png" data-type="image" data-caption="Interactive Reward Crates &amp; Tiered Loot Keys">
+              <img src="assets/Crates.png" alt="Custom reward crates and keys preview" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">Loot Crates</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 6. Duels Arena System -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">PvP &amp; Arenas</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Duels Arena &amp; Auto Arena Rebuilding</h3>
+              <p class="showcase-desc">Instant matchmaking queue, 1v1 PvP combat, customizable kit loadouts, post-fight looting period, and automatic zero-lag arena rollback.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Duels.mp4" data-type="video" data-caption="Duels System with Matchmaking &amp; Automated Arena Rollback">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/Duels.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">1v1 Duels</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 7. Economy All Suite -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Economy Suite</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Full Economy Suite (/ah, /sell, /shop, /worth, /order)</h3>
+              <p class="showcase-desc">All-in-one financial ecosystem featuring player Auction House (/ah), custom GUI /shop, quick /sell menus, /worth lore inspector, and /order boards.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/economy_all.mp4" data-type="video" data-caption="Full Economy Suite (/ah, /sell, /shop, /worth, /order)">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/economy_all.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">All Economy</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 8. Leaderboards All -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Stats &amp; Podiums</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Live Leaderboards &amp; Holograms</h3>
+              <p class="showcase-desc">Real-time stat tracking for kills, balance, playtime, and custom statistics with interactive floating holograms and player skin podiums.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/LeaderBoard_All.mp4" data-type="video" data-caption="Real-Time Holographic Leaderboards &amp; Top Player Podiums">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/LeaderBoard_All.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">Leaderboards</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 9. Customizable Nametags -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Player Branding</span>
+                <span class="media-type-badge">HD UI</span>
+              </div>
+              <h3 class="showcase-title">Customizable Player Nametags</h3>
+              <p class="showcase-desc">High-definition overhead nametags with custom rank prefixes, team colors, health indicators, and badge icons without scoreboard flickering.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/NameTag.png" data-type="image" data-caption="Custom Overhead Player Nametags &amp; Gradient Prefixes">
+              <img src="assets/NameTag.png" alt="Customizable player overhead nametags preview" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">Overhead Tags</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 10. Custom Resource Pack -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Custom Assets</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Bedrock &amp; Java Custom Resource Pack</h3>
+              <p class="showcase-desc">Custom UI textures, unique item icons, custom 3D models, custom fonts, and complete cross-platform parity between Java and Bedrock clients.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/resoursepack_Bedrock.mp4" data-type="video" data-caption="Custom Cross-Platform Resource Pack for Java &amp; Bedrock">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/resoursepack_Bedrock.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">Resource Pack</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 11. /settings GUI Menu -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Player Systems</span>
+                <span class="media-type-badge">HD UI</span>
+              </div>
+              <h3 class="showcase-title">Interactive /settings GUI Menu</h3>
+              <p class="showcase-desc">Personalized player settings GUI to toggle mob spawning, order alerts, auction notifications, night vision, and fast crystal placement.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Setting_Gui.png" data-type="image" data-caption="Interactive In-Game /settings Player Configuration GUI">
+              <img src="assets/Setting_Gui.png" alt="In game settings GUI menu preview" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">Settings GUI</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
+            </div>
+          </article>
+
+          <!-- 12. Better Sidebars (Java & Bedrock Dual Media) -->
+          <article class="showcase-card">
+            <div class="showcase-top">
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Scoreboards &amp; HUD</span>
+                <span class="media-type-badge">Animated Demo</span>
+              </div>
+              <h3 class="showcase-title">Smooth Animated Sidebars (Java &amp; Bedrock)</h3>
+              <p class="showcase-desc">Ultra-smooth, anti-flicker scoreboards with dynamic gradient animations, real-time stats, and customized layouts for both Java and Bedrock screens.</p>
+            </div>
+
+            <div class="media-switch-header">
+              <span class="switch-label">Select Client:</span>
+              <div class="media-toggle-group" role="tablist" aria-label="Sidebar client views">
+                <button type="button" class="media-toggle-btn active" data-target="sidebar-media" data-type="video" data-src="assets/Sidebar_java.mp4" data-title="Java Edition Sidebar" data-badge="Java Edition">Java Sidebar</button>
+                <button type="button" class="media-toggle-btn" data-target="sidebar-media" data-type="video" data-src="assets/Sidebar_Bedrock.mp4" data-title="Bedrock Edition Sidebar" data-badge="Bedrock Edition">Bedrock Sidebar</button>
               </div>
             </div>
-          </article>
 
-          <!-- Item 3: Custom /settings GUI -->
-          <article class="showcase-card">
-            <div class="showcase-top">
-              <span class="showcase-tag">Player Systems</span>
-              <h3 class="showcase-title">In-Game /settings GUI Menu</h3>
-              <p class="showcase-desc">Interactive inventory menu allowing players to toggle mob spawns, notifications, night vision, and fast crystal placement.</p>
-            </div>
-            <div class="media-frame image-frame">
-              <img src="assets/plan-settings.png" alt="In-game /settings GUI menu preview" class="showcase-img" loading="lazy" />
-              <div class="frame-badge">Live Preview</div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Sidebar_java.mp4" data-type="video" data-caption="Animated Sidebars &amp; Dynamic Scoreboards (Java &amp; Bedrock)">
+              <video id="sidebar-media" class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/Sidebar_java.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge" id="sidebar-badge">Java Edition</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
             </div>
           </article>
 
-          <!-- Item 4: Resource Packs -->
+          <!-- 13. Animated TAB & Header -->
           <article class="showcase-card">
             <div class="showcase-top">
-              <span class="showcase-tag">Custom Assets</span>
-              <h3 class="showcase-title">Java &amp; Bedrock Resource Packs</h3>
-              <p class="showcase-desc">Dedicated cross-platform resource packs with custom UI textures, fonts, item icons, and 3D models.</p>
-            </div>
-            <div class="media-frame image-frame">
-              <img src="assets/plan-resourcepack.png" alt="Custom resource pack in-game showcase preview" class="showcase-img" loading="lazy" />
-              <div class="frame-badge">Live Preview</div>
-            </div>
-          </article>
-
-          <!-- Item 5: Tebex Integration -->
-          <article class="showcase-card">
-            <div class="showcase-top">
-              <span class="showcase-tag">Monetization</span>
-              <h3 class="showcase-title">Full Tebex Webstore Integration</h3>
-              <p class="showcase-desc">Complete store setup with rank packages, keys, crates, automated in-game delivery, and broadcast alerts.</p>
-            </div>
-            <div class="media-frame image-frame">
-              <img src="assets/plan-tebex.png" alt="Tebex webstore integration preview" class="showcase-img" loading="lazy" />
-              <div class="frame-badge">Live Preview</div>
-            </div>
-          </article>
-
-          <!-- Item 6: Economy & Trade -->
-          <article class="showcase-card">
-            <div class="showcase-top">
-              <span class="showcase-tag">Economy</span>
-              <h3 class="showcase-title">Economy, GUI Shop &amp; Auction House</h3>
-              <p class="showcase-desc">Single or dual-currency systems with /shop, /sell, item /worth lore inspection, and player auction house (/ah).</p>
-            </div>
-            <div class="media-frame placeholder-frame">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="12" y1="1" x2="12" y2="23"></line>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  </svg>
-                </div>
-                <span class="frame-label">Economy &amp; Shop Media Slot</span>
-                <span class="frame-hint">Upload Image or GIF (1920×1080)</span>
+              <div class="showcase-head-row">
+                <span class="showcase-tag">UI &amp; Visuals</span>
+                <span class="media-type-badge">Animated Demo</span>
               </div>
+              <h3 class="showcase-title">Animated TAB Header &amp; Player List</h3>
+              <p class="showcase-desc">Dynamic server branding, animated MOTD headers, player counts, rank sorting hierarchy, ping indicators, and gradient text effects.</p>
+            </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/tab_java.mp4" data-type="video" data-caption="Animated TAB List Header &amp; Player Rank Hierarchy">
+              <video class="showcase-video" autoplay loop muted playsinline preload="metadata">
+                <source src="assets/tab_java.mp4" type="video/mp4">
+              </video>
+              <div class="frame-badge">Animated TAB</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
             </div>
           </article>
 
-          <!-- Item 7: RTP & Spawn -->
+          <!-- 14. Easier Connection & DNS Translate -->
           <article class="showcase-card">
             <div class="showcase-top">
-              <span class="showcase-tag">Teleportation</span>
-              <h3 class="showcase-title">RTP Zones, /tpa &amp; AFK Area</h3>
-              <p class="showcase-desc">Custom random teleportation queue (/rtpq), world spawn setups, /home, /tpa, and automated AFK reward pools.</p>
-            </div>
-            <div class="media-frame placeholder-frame">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <span class="frame-label">RTP &amp; Teleportation Media Slot</span>
-                <span class="frame-hint">Upload Image or GIF (1920×1080)</span>
+              <div class="showcase-head-row">
+                <span class="showcase-tag">Network Architecture</span>
+                <span class="media-type-badge">HD UI</span>
               </div>
+              <h3 class="showcase-title">Frictionless Connection &amp; Port Translation</h3>
+              <p class="showcase-desc">Streamlined cross-play onboarding with direct port translation, SRV record routing, Bedrock port mapping, and frictionless joining across PC, console, and mobile.</p>
             </div>
-          </article>
-
-          <!-- Item 8: Leaderboards & Holograms -->
-          <article class="showcase-card">
-            <div class="showcase-top">
-              <span class="showcase-tag">Stats &amp; Ranks</span>
-              <h3 class="showcase-title">Leaderboards &amp; Floating Holograms</h3>
-              <p class="showcase-desc">Real-time stat tracking for kills, balance, playtime, and custom floating hologram displays around spawn.</p>
-            </div>
-            <div class="media-frame placeholder-frame">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                  </svg>
-                </div>
-                <span class="frame-label">Leaderboards &amp; Holograms Slot</span>
-                <span class="frame-hint">Upload Image or GIF (1920×1080)</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Item 9: Security & Moderation -->
-          <article class="showcase-card">
-            <div class="showcase-top">
-              <span class="showcase-tag">Security &amp; Moderation</span>
-              <h3 class="showcase-title">Staff Moderation &amp; Anti-Cheat UIs</h3>
-              <p class="showcase-desc">Ban/mute command screens, real-time X-Ray alerts, inventory inspection (/invsee), and automated logging.</p>
-            </div>
-            <div class="media-frame placeholder-frame">
-              <div class="frame-content">
-                <div class="frame-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <span class="frame-label">Moderation &amp; Ban Screen Slot</span>
-                <span class="frame-hint">Upload Image or GIF (1920×1080)</span>
-              </div>
+            <div class="media-frame image-frame zoomable" data-lightbox="assets/Translate.png" data-type="image" data-caption="Frictionless Cross-Play Connection &amp; Port Translation">
+              <img src="assets/Translate.png" alt="Easier connection and multi language port translate preview" class="showcase-img" loading="lazy" />
+              <div class="frame-badge">Cross-Connect</div>
+              <div class="zoom-hint"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg> Zoom</div>
             </div>
           </article>
         </div>
@@ -519,6 +627,24 @@
       </nav>
     </div>
   </footer>
+
+  <!-- ================= LIGHTBOX MODAL ================= -->
+  <div id="mediaLightbox" class="lightbox-modal" aria-hidden="true" role="dialog" aria-label="Media Preview Lightbox">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-dialog">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="lightbox-media-wrap">
+        <img id="lightboxImg" src="" alt="Showcase Expanded Media" style="display:none;" />
+        <video id="lightboxVideo" autoplay loop muted playsinline controls style="display:none;"></video>
+      </div>
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
 
   <script src="script.js" defer></script>
 </body>

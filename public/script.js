@@ -142,4 +142,146 @@
   );
   var discordCard = document.querySelector(".discord-card");
   if (discordCard) countObserver.observe(discordCard);
+
+  /* ---------- Showcase Media View Switchers ---------- */
+  document.querySelectorAll(".media-toggle-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var group = btn.closest(".media-toggle-group");
+      if (group) {
+        group.querySelectorAll(".media-toggle-btn").forEach(function (b) {
+          b.classList.remove("active");
+        });
+      }
+      btn.classList.add("active");
+
+      var targetId = btn.getAttribute("data-target");
+      var newSrc = btn.getAttribute("data-src");
+      var newBadge = btn.getAttribute("data-badge");
+      var newTitle = btn.getAttribute("data-title");
+      var newType = btn.getAttribute("data-type") || "video";
+
+      var targetMedia = document.getElementById(targetId);
+      if (targetMedia && newSrc) {
+        targetMedia.style.opacity = "0.3";
+        
+        if (targetMedia.tagName.toLowerCase() === "video") {
+          var source = targetMedia.querySelector("source");
+          if (source) {
+            source.src = newSrc;
+          } else {
+            targetMedia.src = newSrc;
+          }
+          targetMedia.load();
+          targetMedia.onloadeddata = function () {
+            targetMedia.style.opacity = "1";
+            targetMedia.play().catch(function () {});
+          };
+        } else {
+          targetMedia.src = newSrc;
+          targetMedia.onload = function () {
+            targetMedia.style.opacity = "1";
+          };
+        }
+
+        // Update lightbox reference on parent
+        var frame = targetMedia.closest(".media-frame");
+        if (frame) {
+          frame.setAttribute("data-lightbox", newSrc);
+          frame.setAttribute("data-type", newType);
+          if (newTitle) frame.setAttribute("data-caption", newTitle);
+        }
+      }
+
+      // Update badge if exists
+      if (targetId) {
+        var badgeId = targetId.replace("-media", "-badge");
+        var badgeEl = document.getElementById(badgeId);
+        if (badgeEl && newBadge) {
+          badgeEl.textContent = newBadge;
+        }
+      }
+    });
+  });
+
+  /* ---------- Lightbox Modal ---------- */
+  var lightbox = document.getElementById("mediaLightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxVideo = document.getElementById("lightboxVideo");
+  var lightboxCaption = document.getElementById("lightboxCaption");
+  var lightboxClose = document.getElementById("lightboxClose");
+  var lightboxBackdrop = document.getElementById("lightboxBackdrop");
+
+  function openLightbox(src, type, caption) {
+    if (!lightbox) return;
+
+    var isVideo = type === "video" || src.endsWith(".mp4") || src.endsWith(".webm");
+
+    if (isVideo && lightboxVideo) {
+      if (lightboxImg) lightboxImg.style.display = "none";
+      lightboxVideo.style.display = "block";
+      lightboxVideo.src = src;
+      lightboxVideo.load();
+      lightboxVideo.play().catch(function () {});
+    } else if (lightboxImg) {
+      if (lightboxVideo) {
+        lightboxVideo.pause();
+        lightboxVideo.style.display = "none";
+      }
+      lightboxImg.style.display = "block";
+      lightboxImg.src = src;
+    }
+
+    if (lightboxCaption) lightboxCaption.textContent = caption || "";
+    lightbox.classList.add("active");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove("active");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+      lightboxVideo.src = "";
+      lightboxVideo.style.display = "none";
+    }
+    if (lightboxImg) {
+      lightboxImg.src = "";
+      lightboxImg.style.display = "none";
+    }
+  }
+
+  document.querySelectorAll(".media-frame.zoomable").forEach(function (frame) {
+    frame.addEventListener("click", function () {
+      var src = frame.getAttribute("data-lightbox");
+      var type = frame.getAttribute("data-type") || "image";
+      var caption = frame.getAttribute("data-caption") || "";
+      
+      if (!src) {
+        var vid = frame.querySelector("video source, video");
+        var img = frame.querySelector("img");
+        if (vid) {
+          src = vid.src || vid.getAttribute("src");
+          type = "video";
+        } else if (img) {
+          src = img.src;
+          type = "image";
+        }
+      }
+      
+      if (src) openLightbox(src, type, caption);
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener("click", closeLightbox);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && lightbox && lightbox.classList.contains("active")) {
+      closeLightbox();
+    }
+  });
 })();
